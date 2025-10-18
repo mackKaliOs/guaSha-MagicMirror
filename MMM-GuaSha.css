@@ -1,0 +1,17 @@
+.MMM-GuaSha {
+  font-family: 'Poppins', sans-serif;
+  color: #ffd6e0;
+  text-align: center;
+  padding: 10px;
+}
+
+.MMM-GuaSha h2 {
+  font-size: 1.8em;
+  color: #ffb6c1;
+  margin-bottom: 5px;
+}
+
+.MMM-GuaSha p {
+  font-size: 1.2em;
+  color: #ffeaf0;
+}
