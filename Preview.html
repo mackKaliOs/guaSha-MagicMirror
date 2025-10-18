@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GuaSha Magic Mirror — Demo</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      color: #ffd6e0;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #ffb6c1;
+      font-size: 2.4em;
+      letter-spacing: 1px;
+      margin-bottom: 0.2em;
+    }
+
+    h3 {
+      color: #fce4ec;
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    #mirror {
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #ffb6c1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 0 40px rgba(255, 182, 193, 0.3);
+    }
+
+    #analysis {
+      font-size: 1.2em;
+      padding: 0 20px;
+    }
+
+    #emoji {
+      font-size: 2.2em;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #ffb6c1;
+      color: #1a1a1a;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      background: #ff8aa6;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.8em;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🌸 GuaSha Magic Mirror</h1>
+  <h3>AI Wellness Reflection — Facial Symmetry + Glow Insight</h3>
+
+  <div id="mirror">
+    <div id="analysis">✨ Tap “Analyze” to begin your glow check ✨</div>
+    <div id="emoji"></div>
+  </div>
+
+  <button onclick="simulateAnalysis()">🔍 Analyze</button>
+
+  <footer>Demo simulation — built with 💖 using HTML, CSS, and JS</footer>
+
+  <script>
+    const messages = [
+      { text: "💆 Tension detected on right jawline — massage gently.", emoji: "💆‍♀️" },
+      { text: "✨ Facial balance looks great today!", emoji: "🌸" },
+      { text: "🌿 Slight puffiness — hydrate and breathe deeply.", emoji: "🥒" },
+      { text: "💖 Your glow energy is radiant today!", emoji: "🌞" },
+      { text: "🌺 Balanced complexion — keep up the care!", emoji: "💗" }
+    ];
+
+    function simulateAnalysis() {
+      const mirror = document.getElementById("analysis");
+      const emoji = document.getElementById("emoji");
+      mirror.textContent = "Analyzing… detecting facial symmetry and tone…";
+      emoji.textContent = "🔍";
+
+      setTimeout(() => {
+        const random = messages[Math.floor(Math.random() * messages.length)];
+        mirror.textContent = random.text;
+        emoji.textContent = random.emoji;
+      }, 2200);
+    }
+  </script>
+</body>
+</html>
